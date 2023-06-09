@@ -6,16 +6,26 @@ import classNames from 'classnames';
 import messages from './messages';
 import Tabs from '../generic/tabs/Tabs';
 
+
 const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
-}) => (
+}) => {
+console.log(tabs)
+  
+  return(
   <div id="courseTabsNavigation" className={classNames('course-tabs-navigation', className)}>
     <div className="container-xl">
       <Tabs
         className="nav-underline-tabs"
         aria-label={intl.formatMessage(messages.courseMaterial)}
       >
-        {tabs.map(({ url, title, slug }) => (
+        {tabs.map(({ url, title, slug }) => {
+          if(title === "Dates"){
+            title = "Огноо"
+          } else if (title === "Instructor"){
+            title = "Багшийн Хяналтын самбар"
+          }
+          return(
           <a
             key={slug}
             className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
@@ -23,11 +33,11 @@ const CourseTabsNavigation = ({
           >
             {title}
           </a>
-        ))}
+        )})}
       </Tabs>
     </div>
   </div>
-);
+)};
 
 CourseTabsNavigation.propTypes = {
   activeTabSlug: PropTypes.string,

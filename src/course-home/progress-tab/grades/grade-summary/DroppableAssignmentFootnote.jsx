@@ -23,7 +23,7 @@ const DroppableAssignmentFootnote = ({ footnotes, intl }) => {
             <sup>{index + 1}</sup>
             <FormattedMessage
               id="progress.footnotes.droppableAssignments"
-              defaultMessage="The lowest {numDroppable, plural, one{# {assignmentType} score is} other{# {assignmentType} scores are}} dropped."
+              defaultMessage="Хамгийн бага {numDroppable, plural, one{# {assignmentType} оноо} other{# {assignmentType} оноо}} хасагдан."
               values={{
                 numDroppable: footnote.numDroppable,
                 assignmentType: footnote.assignmentType,

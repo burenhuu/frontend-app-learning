@@ -377,3 +377,50 @@
 @import "course-home/progress-tab/grades/course-grade/GradeBar.scss";
 @import "courseware/course/course-exit/CourseRecommendations";
 @import "product-tours/newUserCourseHomeTour/NewUserCourseHomeTourModal.scss";
+
+
+
+.nav-underline-tabs .nav-link:hover, .nav-underline-tabs .nav-link:focus, .nav-underline-tabs .nav-link.active, .nav-underline-tabs .pgn__tab_more.nav-link.active .dropdown .dropdown-toggle, .pgn__tab_more.nav-link.active .dropdown .nav-underline-tabs .dropdown-toggle {
+  border-bottom-color : #12367E !important;
+  color : #313131 !important;
+}
+
+.course-tabs-navigation .nav a:not(.active):hover{
+  border-bottom: 4px solid #12367E !important;
+  color : #313131 !important;
+}
+
+.bg-primary-color{
+  background-color: #12367E !important;
+}
+
+.btn-brand{
+  background-color: #12367E !important;
+    border-color: #12367E !important;
+
+}
+
+
+.btn-primary{
+  background-color: #12367E !important;
+    border-color: #12367E !important;
+
+}
+
+.btn-brand.focus::before, .btn-brand:focus::before {
+  border: solid 2px  #12367E !important;
+}
+
+.pgn__checkpoint{
+ border-top: 8px solid  #12367E !important; 
+background: #ffffff !important;
+}
+
+.pgn__checkpoint[data-popper-placement^=bottom] > #pgn__checkpoint-arrow::after{
+  border-bottom: solid 15px #12367E !important; 
+}
+
+.btn-outline-primary{
+  color:#12367E !important; 
+    border-color:#12367E !important; 
+}

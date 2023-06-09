@@ -22,6 +22,7 @@ const AlertList = ({
     <div className={className}>
       {topicMessages.map(message => {
         const AlertComponent = getAlertComponent(message.code);
+        console.log(message)
         return (
           <Suspense key={message.id} fallback={null}>
             <AlertComponent
@@ -31,7 +32,7 @@ const AlertList = ({
               payload={message.payload}
               {...customProps}
             >
-              {message.text}
+              {message.text} rewte
             </AlertComponent>
           </Suspense>
         );

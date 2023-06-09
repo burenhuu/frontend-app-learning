@@ -21,7 +21,7 @@ class MasqueradeWidget extends Component {
     this.courseId = props.courseId;
     this.state = {
       autoFocus: false,
-      masquerade: 'Staff',
+      masquerade: 'Багш',
       options: [],
       shouldShowUserNameInput: false,
       masqueradeUsername: null,
@@ -83,7 +83,7 @@ class MasqueradeWidget extends Component {
     const options = available.map((group) => (
       <MasqueradeWidgetOption
         groupId={group.groupId}
-        groupName={group.name}
+        groupName={group.name == "Staff" ? "Багш" : group.name == "Audit" ? "Бусад" :  "Сурагч"}
         key={group.name}
         role={group.role}
         selected={active}
@@ -96,7 +96,7 @@ class MasqueradeWidget extends Component {
     if (active.userName) {
       this.setState({
         autoFocus: false,
-        masquerade: 'Specific Student...',
+        masquerade: 'Сурагч...',
         masqueradeUsername: active.userName,
         shouldShowUserNameInput: true,
       });
@@ -118,9 +118,9 @@ class MasqueradeWidget extends Component {
     } = this.state;
     const specificLearnerInputText = this.props.intl.formatMessage(messages.placeholder);
     return (
-      <div className="flex-grow-1">
+      <div className="flex-grow-1 ">
         <div className="row">
-          <span className="col-auto col-form-label pl-3">View this course as:</span>
+          <span className="col-auto col-form-label pl-3">Хичээлийг үзэх хэлбэр:</span>
           <Dropdown className="flex-shrink-1 mx-1">
             <Dropdown.Toggle variant="inverse-outline-primary">
               {masquerade}

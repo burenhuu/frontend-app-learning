@@ -42,8 +42,7 @@ const DateSummary = ({
           <FormattedDate
             value={dateBlock.date}
             day="numeric"
-            month="short"
-            weekday="short"
+            month="numeric"
             year="numeric"
             {...timezoneFormatArgs}
           />
@@ -57,7 +56,7 @@ const DateSummary = ({
             </div>
           )}
           {!linkedTitle && (
-            <div className="font-weight-bold mt-2">{dateBlock.title}</div>
+            <div className="font-weight-bold mt-2">{dateBlock.title === "Course starts" ? "Хичээл эхлэх" : dateBlock.title}</div>
           )}
         </div>
         {dateBlock.description && (

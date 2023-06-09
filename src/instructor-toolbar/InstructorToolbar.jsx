@@ -65,9 +65,9 @@ const InstructorToolbar = (props) => {
   const accessExpirationMasqueradeBanner = useAccessExpirationMasqueradeBanner(courseId, tab);
   const courseStartDateMasqueradeBanner = useCourseStartMasqueradeBanner(courseId, tab);
 
-  return (!didMount ? null : (
+  return (!didMount ? null : ( 
     <div data-testid="instructor-toolbar">
-      <div className="bg-primary text-white">
+      <div className="bg-primary-color text-white">
         <div className="container-xl py-3 d-md-flex justify-content-end align-items-start">
           <div className="align-items-center flex-grow-1 d-md-flex mx-1 my-1">
             <MasqueradeWidget courseId={courseId} onError={showMasqueradeError} />
@@ -75,17 +75,17 @@ const InstructorToolbar = (props) => {
           {(urlStudio || urlInsights) && (
             <>
               <hr className="border-light" />
-              <span className="mr-2 mt-1 col-form-label">View course in:</span>
+              <span className="mr-2 mt-1 col-form-label">Хичээл үзэх:</span>
             </>
           )}
           {urlStudio && (
             <span className="mx-1 my-1">
-              <a className="btn btn-inverse-outline-primary" href={urlStudio}>Studio</a>
+              <a className="btn btn-inverse-outline-primary" href={urlStudio}>Студи</a>
             </span>
           )}
           {urlInsights && (
             <span className="mx-1 my-1">
-              <a className="btn btn-inverse-outline-primary" href={urlInsights}>Insights</a>
+              <a className="btn btn-inverse-outline-primary" href={urlInsights}>Инсайт</a>
             </span>
           )}
         </div>

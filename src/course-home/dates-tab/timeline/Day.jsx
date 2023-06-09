@@ -32,7 +32,7 @@ const Day = ({
   } = useModel('courseHomeMeta', courseId);
 
   const timezoneFormatArgs = userTimezone ? { timeZone: userTimezone } : {};
-
+console.log(timezoneFormatArgs);
   const { color, badges } = getBadgeListAndColor(date, intl, null, items);
 
   return (
@@ -52,8 +52,7 @@ const Day = ({
           <FormattedDate
             value={date}
             day="numeric"
-            month="short"
-            weekday="short"
+            month="numeric"
             year="numeric"
             {...timezoneFormatArgs}
           />
@@ -72,10 +71,10 @@ const Day = ({
             <div key={item.title + item.date} className={classNames(textColor, 'small pb-1')} data-testid="dates-item">
               <div>
                 <span className="small">
-                  <span className="font-weight-bold">{item.assignmentType && `${item.assignmentType}: `}{title}</span>
+                  {/* <span className="font-weight-bold">{item.assignmentType && `${item.assignmentType}: `}{title}</span> */}
                   {showDueDateTime && (
                     <span>
-                      <span className="mx-1">due</span>
+                      <span className="mx-1">дуусах хугацаа</span>
                       <FormattedTime
                         value={date}
                         timeZoneName="short"

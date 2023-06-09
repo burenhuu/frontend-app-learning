@@ -41,6 +41,8 @@ const DatesTab = ({ intl }) => {
     });
   };
 
+  console.log(intl.formatMessage(messages.title))
+
   return (
     <>
       <div role="heading" aria-level="1" className="h2 my-3">

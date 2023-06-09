@@ -33,7 +33,6 @@ const CourseStartAlert = ({ payload }) => {
       key="timeRemaining"
       value={delta / 1000}
       numeric="auto"
-      // 1 year interval to help auto format. It won't format without updateIntervalInSeconds.
       updateIntervalInSeconds={YEAR_SEC}
       {...timezoneFormatArgs}
     />
@@ -69,14 +68,14 @@ const CourseStartAlert = ({ payload }) => {
       <strong>
         <FormattedMessage
           id="learning.outline.alert.end.long"
-          defaultMessage="Course starts {timeRemaining} on {courseStartDate}."
+          defaultMessage="Энэ курс {courseStartDate} дуусна."
           description="Used when the time remaining is more than a day away."
           values={{
             courseStartDate: (
               <FormattedDate
                 key="courseStartDate"
                 day="numeric"
-                month="short"
+                month="numeric"
                 year="numeric"
                 value={startDate}
                 {...timezoneFormatArgs}

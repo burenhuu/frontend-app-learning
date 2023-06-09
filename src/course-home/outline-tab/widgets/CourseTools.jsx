@@ -65,14 +65,18 @@ const CourseTools = ({ intl }) => {
     <section className="mb-4">
       <h2 className="h4">{intl.formatMessage(messages.tools)}</h2>
       <ul className="list-unstyled">
-        {courseTools.map((courseTool) => (
+        {courseTools.map((courseTool) => {
+            if (courseTool.analyticsId == "edx.bookmarks"){
+              return <></>
+            }
+          return(
           <li key={courseTool.analyticsId} className="small">
             <a href={courseTool.url} onClick={() => logClick(courseTool.analyticsId)}>
               <FontAwesomeIcon icon={renderIcon(courseTool.analyticsId)} className="mr-2" fixedWidth />
               {courseTool.title}
             </a>
           </li>
-        ))}
+        )})}
         <li className="small" id="courseHome-launchTourLink">
           <LaunchCourseHomeTourButton />
         </li>
