@@ -80,7 +80,6 @@ const TabPage = ({ intl, ...props }) => {
           courseTitle={title}
         />
         <LoadedTabPage {...props} />
-        <Footer />
       </>
     );
   }
@@ -92,7 +91,6 @@ const TabPage = ({ intl, ...props }) => {
       <p className="text-center py-5 mx-auto" style={{ maxWidth: '30em' }}>
         {intl.formatMessage(messages.failure)}
       </p>
-      <Footer />
     </>
   );
 };
